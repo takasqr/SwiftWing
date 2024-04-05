@@ -9,13 +9,13 @@ import Foundation
 
 import CoreData
 
-struct PersistenceController {
+public struct PersistenceController {
     
-    static var shared = PersistenceController(name: "Default")
+    public static var shared = PersistenceController(name: "Default")
 
-    let container: NSPersistentContainer
+    public let container: NSPersistentContainer
 
-    init(name: String, inMemory: Bool = false) {
+    private init(name: String, inMemory: Bool = false) {
         
         container = NSPersistentContainer(name: name)
         
@@ -44,7 +44,7 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
-    static func createSharedInstance(name: String, inMemory: Bool = false) {
+    public static func createSharedInstance(name: String, inMemory: Bool = false) {
         PersistenceController.shared = PersistenceController(name: name, inMemory: inMemory)
     }
 }
