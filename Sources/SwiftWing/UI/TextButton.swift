@@ -14,13 +14,7 @@ public struct TextButton: View {
     let icon: String
     let color: Color
     
-    public init(label: String, icon: String, color: Color) {
-        self.label = label
-        self.icon = icon
-        self.color = color
-    }
-    
-    init(_ label: String, _ icon: String, _ color: Color = Color(red: 47/255, green: 88/255, blue: 205/255)) {
+    public init(_ label: String, _ icon: String, _ color: Color = Color(red: 47/255, green: 88/255, blue: 205/255)) {
         
         self.label = label
         self.icon = icon
