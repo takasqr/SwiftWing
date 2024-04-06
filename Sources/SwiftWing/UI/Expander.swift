@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-@available(macOS 12.0, *)
 public struct Expander: View {
     /// タイトル
     let title: String
@@ -16,6 +15,12 @@ public struct Expander: View {
     let content: String
     /// 詳細エリアを開くかどうか
     @State var showDetail: Bool = false
+    
+    public init(title: String, content: String, showDetail: Bool = false) {
+        self.title = title
+        self.content = content
+        self._showDetail = State(initialValue: showDetail)
+    }
     
     public var body: some View {
         VStack {
