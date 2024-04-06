@@ -10,7 +10,7 @@ import Foundation
 public class Key {
     var property: Dictionary<String, Any> = [:]
     
-    init() {
+    public init() {
         // Pathを設定
         let path = Bundle.main.path(forResource: "Key", ofType: "plist")
         

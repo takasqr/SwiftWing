@@ -9,6 +9,11 @@ import Foundation
 
 @available(macOS 12.0, *)
 public class APIClient {
+    
+    public init() {
+        
+    }
+    
     public func get(urlString: String, headers: [String: String] = [:]) async throws -> (Data, URLResponse) {
         let url: URL = URL(string: urlString)!
         var request = URLRequest(url: url)
