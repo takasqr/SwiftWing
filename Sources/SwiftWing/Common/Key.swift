@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Key {
+public class Key {
     var property: Dictionary<String, Any> = [:]
     
     init() {
@@ -21,7 +21,7 @@ class Key {
         }
     }
 
-    func get(key: String) -> Any {
+    public func get(key: String) -> Any {
         return (property[key])
     }
 }

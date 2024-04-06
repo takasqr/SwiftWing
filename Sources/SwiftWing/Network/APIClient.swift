@@ -8,8 +8,8 @@
 import Foundation
 
 @available(macOS 12.0, *)
-class APIClient {
-    func get(urlString: String, headers: [String: String] = [:]) async throws -> (Data, URLResponse) {
+public class APIClient {
+    public func get(urlString: String, headers: [String: String] = [:]) async throws -> (Data, URLResponse) {
         let url: URL = URL(string: urlString)!
         var request = URLRequest(url: url)
 
@@ -41,7 +41,7 @@ class APIClient {
         return (returnData, returnResponse)
     }
     
-    func post(urlString: String, headers: [String: String] = [:], body: Data) async throws -> (Data, URLResponse) {
+    public func post(urlString: String, headers: [String: String] = [:], body: Data) async throws -> (Data, URLResponse) {
         guard let url = URL(string: urlString) else {
             throw NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
         }

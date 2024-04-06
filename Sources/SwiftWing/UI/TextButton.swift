@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @available(macOS 12.0, *)
-struct TextButton: View {
+public struct TextButton: View {
     
     let label: String
     let icon: String
@@ -22,7 +22,7 @@ struct TextButton: View {
         self.color = color
     }
     
-    var body: some View {
+    public var body: some View {
         HStack(spacing: 0) {
             Image(systemName: icon)
                 .foregroundColor(color)

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @available(macOS 12.0, *)
-struct Expander: View {
+public struct Expander: View {
     /// タイトル
     let title: String
     /// 本文
@@ -17,7 +17,7 @@ struct Expander: View {
     /// 詳細エリアを開くかどうか
     @State var showDetail: Bool = false
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack {
                 Spacer()
